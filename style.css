@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100%;
+}
+img{
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform:translate(10px,10px)rotate(0deg);
+    animation: car 5s ease infinite forwards ;
+}
+
+@keyframes car{
+    to{
+        transform:rotate(180deg);
+    }
+        /* 25%{
+            left:90% ;
+            top: 40%;
+            transform: rotate(90deg);
+        }
+        50%{
+            left: 50%;
+            top:80%;
+            transform: rotate(180deg) rotatex(180deg);
+        }
+        51%{
+            transform: rotate(180deg) rotatex(180deg)
+        }
+        75%{
+            left:10%;
+            top: 40;
+            transform: rotate(270deg) rotatex(180deg);
+        }
+        100%{
+            left: 50%;
+            top: 0;
+            
+        } */
+}

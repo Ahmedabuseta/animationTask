@@ -1,0 +1,180 @@
+*{
+    margin: 0;
+    text-transform: capitalize;
+    box-sizing: border-box;
+}
+body{
+    background-color: #123;
+}
+.container{
+    height: 100vh;
+    width: 98%;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    border-radius: 8px;
+}
+.track{
+    width: 100%;
+    height:12.4%;
+    margin:  auto ;
+    border-bottom: #b0b0c9 solid 5px;
+    background-color: #000000;
+    position: relative;
+    flex-grow: 1;
+}
+img{
+    position: absolute;
+    height: 150%;
+    flex-shrink: 0;
+}
+.left-car{
+    left: 0px;
+    top: 5px;
+    animation: raceLeft 2s ease-out 0s  forwards  ;
+}
+.right-car{
+    right: 0;
+    top: 0px;
+    animation: raceRight 2s ease-out  4s forwards  ;
+}
+
+.light {
+        position: relative;
+        width: 150px;
+        height: 10px;
+        background: -webkit-linear-gradient(left,#fff,rgba(255, 255, 255, 0.082));
+        position: absolute;
+        transform: scale(-0.42,-0.55)  skew(53deg, 12deg);
+}
+.light-left{
+    left: 50px;
+    bottom: 0px;
+    animation: light-left 2s ease-out 0s forwards ;
+}
+.light-right{
+    position: absolute;
+    right: 60px;
+    top: 69%;
+    animation: light-right 2s ease-out 4s forwards;
+    transform: rotatey(180deg);
+}
+.right-dust{
+    position: absolute;
+    transform: scale(.7);
+    right:100px;
+    opacity: 0;
+    animation:dust-right  1s ease-out 2s forwards;
+}
+.left-dust{
+    position: absolute;
+    transform: scale(.7) rotatey(180deg);
+    left:100px;
+    opacity: 0;
+    animation:  dust-left  1s ease-out 0s forwards;
+}
+.dust2{
+    animation-delay: 2s;
+}
+.dust3{
+    animation-delay: 4s;
+}
+.dust4{
+    animation-delay: 6s;
+}
+.dust5{
+    animation-delay: 8s;
+}
+.dust6{
+    animation-delay: 10s;
+}
+.dust7{
+    animation-delay: 12s;
+}
+.dust8{
+    animation-delay: 14s;
+}
+.car2{
+    animation-delay: 2s;
+}
+.car3{
+    animation-delay: 4s;
+}
+.car4{
+    animation-delay: 6s;
+}
+.car5{
+    animation-delay: 8s;
+}
+.car6{
+    animation-delay: 10s;
+}
+.car7{
+    animation-delay: 12s;
+}
+.car8{
+    animation-delay: 14s;
+}
+@keyframes light-left{
+    99%{
+        width: 150px;
+        height: 10px;
+        left: 95%;
+        background: -webkit-linear-gradient(left,#fff,rgba(255, 255, 255, 0.082));
+        transform: scale(-0.42,-0.55)  skew(53deg, 12deg);
+        } 
+    100%{
+        left: 92%;
+        background: -webkit-linear-gradient(-225deg,rgba(129, 9, 9, 0.055),rgb(255, 0, 0));
+        transform: scale(-0.42,-0.55) rotateY(180deg) skew(53deg, 12deg);
+        width: 40px;
+        height: 20px;
+    }
+}
+@keyframes light-right{
+    99%{
+        width: 150px;
+        height: 10px;
+        right: 95%;
+        background: -webkit-linear-gradient(left,#fff,rgba(255, 255, 255, 0.082));
+        transform: scale(-0.42,-0.55)  skew(53deg, 12deg);
+        } 
+    100%{
+        right: 92%;
+        background: -webkit-linear-gradient(-225deg,rgba(129, 9, 9, 0.055),rgb(255, 0, 0));
+        transform: scale(-0.42,-0.55) rotateY(180deg) skew(53deg, 12deg);
+        width: 40px;
+        height: 15px;
+    }
+}
+@keyframes raceLeft{
+100%{
+    left: 93%;
+}
+}
+@keyframes raceRight{
+    100%{
+        right: 93%;
+    }
+    }
+    @keyframes dust-right{
+        50%{
+            opacity: .7;
+            right: 0;
+        }
+        100%{
+            right:0;
+            opacity: 0;
+        }
+    }
+    @keyframes dust-left{
+        50%{
+            opacity: .7;
+            left: 0;
+        }
+        100%{
+            left:0;
+            opacity: 0;
+        }
+    }
